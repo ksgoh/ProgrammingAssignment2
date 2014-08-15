@@ -33,11 +33,11 @@ cacheSolve <- function(x, ...) {
         
         i <- x$getinverse()
         if(!is.null(i)) {
-                message("using cached inverse matrix")
+              message("using cached inverse matrix")
         } else {
-                m <- x$get()
-                i <- solve(m, ...)
-                x$setinverse(i)
+              m <- x$get()
+              i <- solve(m, ...)
+              x$setinverse(i)
         }
         return (i)
 }
