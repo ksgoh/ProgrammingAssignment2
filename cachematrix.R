@@ -1,4 +1,4 @@
-## These following 2 functions are used to cache potentially time-consuming computations
+## The following 2 functions are used to cache potentially time-consuming computations
 ## to inverse matrix.
 
 ## The makeCacheMatrix function creates a special "matrix" object that can cache its inverse.
@@ -35,9 +35,9 @@ cacheSolve <- function(x, ...) {
         if(!is.null(i)) {
                 message("using cached inverse matrix")
         } else {
-        			m <- x$get()
-        			i <- solve(m, ...)
-        			x$setinverse(i)
+        	        m <- x$get()
+                i <- solve(m, ...)
+                x$setinverse(i)
         }
         return (i)
 }
